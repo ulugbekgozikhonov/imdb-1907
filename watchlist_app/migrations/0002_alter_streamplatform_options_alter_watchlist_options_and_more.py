@@ -7,7 +7,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('api', '0001_initial'),
+        ('watchlist_app', '0001_initial'),
     ]
 
     operations = [
@@ -22,6 +22,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='watchlist',
             name='stream',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='api.streamplatform'),
+            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='watchlist_app.streamplatform'),
         ),
     ]

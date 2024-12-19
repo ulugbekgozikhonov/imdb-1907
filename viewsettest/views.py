@@ -1,7 +1,7 @@
 from rest_framework import viewsets
 
-from api.models import WatchList
-from api.serializers import WatchListSerializer
+from watchlist_app.models import WatchList
+from watchlist_app.serializers import WatchListSerializer
 
 
 class WatchListViewSet(viewsets.ModelViewSet):

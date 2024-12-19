@@ -24,10 +24,10 @@ class StreamPlatform(BaseModel):
 
 class WatchList(BaseModel):
 	title = models.CharField(max_length=100)
-	rating_sum = models.PositiveIntegerField()
+	rating_sum = models.PositiveIntegerField(default=0)
 	description = models.TextField()
-	rating = models.FloatField()
-	rating_number = models.PositiveIntegerField()
+	rating = models.FloatField(default=0)
+	rating_number = models.PositiveIntegerField(default=0)
 	is_active = models.BooleanField(default=True)
 	stream = models.ForeignKey(StreamPlatform, on_delete=models.CASCADE, null=True)
 

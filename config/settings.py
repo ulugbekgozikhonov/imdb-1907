@@ -25,8 +25,10 @@ INSTALLED_APPS = [
 	'django.contrib.staticfiles',
 	# packages
 	'rest_framework',
+	'rest_framework.authtoken',
 	# locale
-	'api.apps.ApiConfig',
+	'watchlist_app.apps.ApiConfig',
+	'user_app',
 	'viewsettest'
 ]
 
@@ -110,9 +112,9 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK = {
-	# 'DEFAULT_AUTHENTICATION_CLASSES': [
-	# 	'rest_framework.authentication.BasicAuthentication',
-	# ],
+	'DEFAULT_AUTHENTICATION_CLASSES': [
+		'rest_framework.authentication.TokenAuthentication',
+	],
 	'DEFAULT_PERMISSION_CLASSES': [
 		'rest_framework.permissions.AllowAny',
 	]

@@ -8,7 +8,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('api', '0002_alter_streamplatform_options_alter_watchlist_options_and_more'),
+        ('watchlist_app', '0002_alter_streamplatform_options_alter_watchlist_options_and_more'),
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
     ]
 
@@ -34,7 +34,7 @@ class Migration(migrations.Migration):
                 ('rating', models.PositiveIntegerField()),
                 ('description', models.TextField()),
                 ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='reviews', to=settings.AUTH_USER_MODEL)),
-                ('watchlist', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='reviews', to='api.watchlist')),
+                ('watchlist', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='reviews', to='watchlist_app.watchlist')),
             ],
             options={
                 'abstract': False,

@@ -5,9 +5,9 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from api.models import WatchList, StreamPlatform, Review
-from api.permissions import IsAdminOrReadOnly
-from api.serializers import WatchListSerializer, StreamPlatformSerializer, ReviewSerializer
+from watchlist_app.models import WatchList, StreamPlatform, Review
+from watchlist_app.permissions import IsAdminOrReadOnly
+from watchlist_app.serializers import WatchListSerializer, StreamPlatformSerializer, ReviewSerializer
 
 
 class WatchListAPIView(APIView):

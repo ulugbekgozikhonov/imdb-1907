@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from api.models import StreamPlatform, WatchList, Review
+from watchlist_app.models import StreamPlatform, WatchList, Review
 
 
 class StreamPlatformSerializer(serializers.ModelSerializer):
@@ -13,6 +13,9 @@ class StreamPlatformSerializer(serializers.ModelSerializer):
 
 class WatchListSerializer(serializers.ModelSerializer):
 	stream = StreamPlatformSerializer(read_only=True)
+	rating = serializers.FloatField(read_only=True)
+	rating_number = serializers.IntegerField(read_only=True)
+	is_active = serializers.BooleanField(read_only=True)
 
 	class Meta:
 		model = WatchList

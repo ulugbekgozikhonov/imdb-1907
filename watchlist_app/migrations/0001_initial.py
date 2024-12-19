@@ -35,7 +35,7 @@ class Migration(migrations.Migration):
                 ('title', models.CharField(max_length=100)),
                 ('description', models.TextField()),
                 ('is_active', models.BooleanField(default=True)),
-                ('stream', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='api.streamplatform')),
+                ('stream', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='watchlist_app.streamplatform')),
             ],
             options={
                 'abstract': False,
